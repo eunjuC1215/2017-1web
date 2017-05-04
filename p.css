@@ -1,0 +1,22 @@
+h1{
+	text-align:center;
+}
+
+form{
+	text-align:center;
+}
+
+a.gotop{
+	position:fixed;
+	bottom:30px;
+	right:20px;
+}
+p.made{
+	color:white;
+	text-align:center;
+}
+
+a.visited{
+	color:red;
+	text-decoration:none;
+}
