@@ -6,6 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="p.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+<style>
+	#juice_panel{display:none;}
+	#tea_panel{display:none;}
+	#dessert_panel{display:none;}
+	#demo-1 {display:none;}
+</style>
 </head>
 <body>
 	<div class="line">
@@ -17,22 +24,14 @@
 	</audio>
 	<div>
 	</div>
-	<br><br><br><br><br><br>
+	<br><br>
 	<div class="logo">
 	</div>
-	<br>
-	<div class="menu">
-		<ul>
-			<li><a href="#coffe">COFFEE</a></li>
-			<li><a href="#juice">JUICE</a></li>
-			<li><a href="#tea">TEA</a></li>
-			<li><a href="#dessert">DESSERT</a></li>
-		</ul>
-	</div>
-	<br><br><br><br>
+	<div class="want_order">
+	<div > 주문하기 </div> </div>
 	<div class="order">
-	<form>
-		<br><br>
+	<form >
+		<br>
 		name : <input type="text" name="myname" required><br><br>
 		phone : <input type="tel" name="myphone" maxlength="11" required><br><br>
 		order : <input type="text" name="order" required><br><br>
@@ -40,56 +39,65 @@
 		<button type="reset">Reset</button>
 	</from>
 	</div>
-	<br><br><br><br><br>
-	<h1 id="coffe">COFFEE</h1>
-	<div class="list">
-		<img src="americano_hot.jpg" title="아메리카노(HOT) 1500">
-		<img src="americano_cold.jpg" title="아메리카노(ICE) 2000">
-		<img src="latte_hot.jpg" title="카페라떼(HOT) 2500">
-		<img src="latte_ice.jpg" title="카페라떼(ICE) 3000">
-		<img src="mocha.jpg" title="카페모카(HOT) 2500">
-		<img src="mocha_ice.jpg" title="카페모카(ICE) 3000">
-		<img src="caramel.jpg" title="카라멜마끼아또(HOT) 2500">
-		<img src="caramel_ice.jpg" title="카라멜마끼아또(ICE) 3000">
+	<br>
+	<div class="menu">
+		<ul>
+			<li><a href="#coffe" id ="coffe_flip">COFFEE</a></li>
+			<li><a href="#juice" id="juice_flip">JUICE</a></li>
+			<li><a href="#tea" id="tea_flip">TEA</a></li>
+			<li><a href="#dessert" id="dessert_flip">DESSERT</a></li>
+		</ul>
 	</div>
-	<br><br><br>
-	<h1 id="juice">JUICE</h1>
-	<div class="list">
-		<img src="berry_yogurt.jpg" title="블루베리 요거트 3000">
-		<img src="mango.jpg" title="망고주스 3000">
-		<img src="greentea_banana.jpg" title="녹차 바나나 쉐이크 3500">
-		<img src="strawberry_yogurt.jpg" title="퐁당 딸기라떼 4000">
-	</div>
-	<br><br><br>
-	<h1 id="tea">TEA</h1>
-	<div class="list">
-		<img src="chi.jpg" title="차이 티(HOT) 4000">
-		<img src="greentea.jpg" title="제주 유기 녹차(HOT) 4000">
-		<img src="honey_black.jpg" title="자몽 허니 블랙 티(HOT) 4000">
-		<img src="ulgray.jpg" title="얼 그레이 티(HOT) 4000">
-		<img src="malcha_mint.jpg" title="말차 샷 민트 티(ICE) 4500">
-		<img src="fashion.jpg" title="라임 패션 티(ICE) 4500">
-		<img src="hozi.jpg" title="제주 호지 티 라떼(ICE) 4500">
-		<img src="greentea_ice.jpg" title="제주 그린티 라떼(ICE) 5000">
+	<br>
+	<div id="coffe">
+	<div class="list" id="coffe_panel">
+		<img src="americano_hot.jpg" id="americano_click">
+		<img src="americano_cold.jpg" id="americano2_click">
+		<img src="latte_hot.jpg" id="latte_click">
+		<img src="latte_ice.jpg" id="latte2_click">
+		<img src="mocha.jpg" id="mocha_click">
+		<img src="mocha_ice.jpg" id="mocha2_click">
+		<img src="caramel.jpg" id="caramel_click">
+		<img src="caramel_ice.jpg" id="caramel2_click">
+	</div>	</div>
+	<div id="juice">
+	<div class="list" id="juice_panel">
+		<img src="berry_yogurt.jpg" id="blueberry_click">
+		<img src="mango.jpg" id="mango_click">
+		<img src="greentea_banana.jpg" id="shake_click">
+		<img src="strawberry_yogurt.jpg" id="strawberry_click">
+	</div>	</div>
+	<div id="tea">
+	<div class="list" id="tea_panel">
+		<img src="chi.jpg" id="chi_click">
+		<img src="greentea.jpg" id="greentea_click">
+		<img src="honey_black.jpg" id="honey_click">
+		<img src="ulgray.jpg" id="ulgray_click">
+		<img src="malcha_mint.jpg" id="malcha_click">
+		<img src="fashion.jpg" id="fashion_click">
+		<img src="hozi.jpg" id="hozi_click">
+		<img src="greentea_ice.jpg" id="greentea_ice_click">
+	</div>	</div>
+	<div id="dessert">
+	<div class="list" id="dessert_panel">
+		<img src="muffine_blueberry.jpg" id="muffine_blueberry_click">
+		<img src="muffine_chocolate.jpg" id="muffine_chocolate_click">
+		<img src="potato_bagle.jpg" id="potato_click">
+		<img src="cheese_bagle.jpg" id="cheese_click">
+		<img src="tiramisu.jpg" id="tiramisu_click">
+		<img src="blueberry_cake.jpg" id="blueberry_cake_click">
+		<img src="creamcheese_cake.jpg" id="creamcheese_cake_click">
+		<img src="castella.jpg" id="castella_click">
+	</div>	</div>
 
-	</div>
-	<br><br><br>
-	<h1 id="dessert">DESSERT</h1>
-	<div class="list">
-		<img src="muffine_blueberry.jpg" title="블루메리 머핀 2000">
-		<img src="muffine_chocolate.jpg" title="초콜릿 머핀 2000">
-		<img src="potato_bagle.jpg" title="감자 베이글 2700">
-		<img src="cheese_bagle.jpg" title="치즈 베이글 2700">
-		<img src="tiramisu.jpg" title="티라미수 3000">
-		<img src="blueberry_cake.jpg" title="블루베리 케이크 3300">
-		<img src="creamcheese_cake.jpg" title="크림치즈 케이크 3300">
-		<img src="castella.jpg" title="카스테라 2500">
-	</div>
-	<br><br><br><br>
+	<br><br>
+
+	<br><br>
 	<div class="line">
 	<p class="made">made by. eunju choi :)</p>
 	<p class="made">want investment <a href="http://www.facebook.com/abcdoko" target="_blank">"click here"</a>
 	</div>
+	<script type="text/javascript" src="menu_slide.js"></script>
+	<script type="text/javascript" src="menu_value.js"></script>
 </body>
 </html>
-
